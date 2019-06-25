@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dalvarez\\Documents\\GitHub\\personal\\gradebook\\src\\GradeBook\\GradeBook.csproj",
+      "projectUniqueName": "C:\\Users\\dalvarez\\Documents\\GitHub\\personal\\cs-learning\\gradebook\\src\\GradeBook\\GradeBook.csproj",
       "projectName": "GradeBook",
-      "projectPath": "C:\\Users\\dalvarez\\Documents\\GitHub\\personal\\gradebook\\src\\GradeBook\\GradeBook.csproj",
+      "projectPath": "C:\\Users\\dalvarez\\Documents\\GitHub\\personal\\cs-learning\\gradebook\\src\\GradeBook\\GradeBook.csproj",
       "packagesPath": "C:\\Users\\dalvarez\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dalvarez\\Documents\\GitHub\\personal\\gradebook\\src\\GradeBook\\obj\\",
+      "outputPath": "C:\\Users\\dalvarez\\Documents\\GitHub\\personal\\cs-learning\\gradebook\\src\\GradeBook\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
