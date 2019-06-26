@@ -6,7 +6,7 @@ namespace GradeBook
     public class Book {
         public Book(string name)
         {
-            this.name = name;
+            Name = name;
             grades = new List<double>();
         }
         public void AddGrade(double grade)
@@ -29,12 +29,12 @@ namespace GradeBook
             }
 
             result.Average /= grades.Count;
-            return result;
 
+            return result;
         }
 
         private List<double> grades;
-        private string name;
+        public string Name;
     }
 }
     
