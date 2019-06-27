@@ -56,6 +56,10 @@ namespace GradeBook
                 // when the final curley brace is reached, we guarantee that 
                 // writer.Dispose() will be called, cleaning up memory
                 writer.WriteLine(grade);
+                if(GradeAdded != null)
+                {
+                    GradeAdded(this, new EventArgs());
+                }
             }
         }
 
