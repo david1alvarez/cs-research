@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+    <head>
+        <title>Navigation exercise</title>
+    </head>
+    <body>
+        <div>I am an Element</div>
+        <div>
+
+            I have children
+            <a>I am a child</a>
+        </div>
+        <ul>
+            <li>I am the first element of a list</li>
+            <li>I am the last element of a list</li>
+        </ul>
+    </body>
+</html>
+<script>
+    var textArray = [];
+    for(var element of document.body.children) {
+        if (element.tagName == 'DIV') {
+            textArray.push(element.textContent);
+        }
+    }
+    console.log(textArray);
+</script>
