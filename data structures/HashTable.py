@@ -19,10 +19,6 @@ class HashTable(object):
             return False
     
     def __iter__(self):
-        # for item in self.array:
-        #     if item is not None:
-        #         for kvp in list(item):
-        #             print(kvp)
         return self
                 
     def __next__(self):
