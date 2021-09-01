@@ -1,3 +1,4 @@
+import random
 def partition(arr, low, high):
     i = (low-1)
     pivot = arr[high]
@@ -13,6 +14,7 @@ def partition(arr, low, high):
     # the pivot will be to the left of it, and all elements greater than it will be to the right of it. The order of those domains
     # doesnt matter, as the point of the partitioning is to find the sorted index of the pivot.
     # Partitioning in this way also mutates the array, so we can use the new somewhat-sorted array in our next iterations.
+    
     for j in range(low, high):
         print(f'i={i}, j={j}, arr={arr}')
         if arr[j] <= pivot:
@@ -34,7 +36,8 @@ def quickSort(arr, low, high):
         quickSort(arr, partitionIndex + 1, high)
 
 
-arr = [10, 7, 8, 9, 1, 5]
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+random.shuffle(arr)
 n = len(arr)
 quickSort(arr, 0, n-1)
 print(arr)
