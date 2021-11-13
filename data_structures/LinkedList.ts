@@ -1,3 +1,11 @@
+class ListNode {
+    constructor(data: any) {
+        this.data = data;
+    }
+    data: any;
+    next: ListNode;
+}
+
 export class LinkedList {
     head: ListNode;
     constructor(data: any) {
@@ -40,12 +48,4 @@ export class LinkedList {
         // removing any reference to the deleted element, which will be garbage collected
         element.next = element.next.next;
     }
-}
-
-class ListNode {
-    constructor(data: any) {
-        this.data = data;
-    }
-    data: any;
-    next: ListNode;
 }
