@@ -1,0 +1,136 @@
+/* Inspirated from  http://www.alessioatzeni.com/wp-content/tutorials/html-css/CSS3-loading-animation-loop/index.html */
+
+.ouro {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.ouro::after {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  display: block;
+  height: 80%;
+  width: 80%;
+  background: none repeat scroll 0 0 #FFFFFF;
+  border-radius: 50%;
+}
+.ouro > span {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  overflow: hidden;
+}
+
+.left {
+left: 0;
+}
+
+.right {
+left: 50%;
+}
+
+.anim {
+  position: absolute;
+  left: 100%;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 999px;
+  background: none repeat scroll 0 0 grey;
+  opacity: 0.8;
+  -webkit-animation: ui-spinner-rotate-left 8s infinite;
+  -webkit-animation-timing-function: cubic-bezier(0, 0, 0.4, 1);
+  animation: ui-spinner-rotate-left 8s infinite;
+  animation-timing-function: cubic-bezier(0, 0, 0.4, 1);
+  -webkit-transform-origin: 0 50% 0;
+  transform-origin: 0 50% 0;
+}
+.left .anim {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+.right .anim {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  left: -100%;
+  -webkit-transform-origin: 100% 50% 0;
+  transform-origin: 100% 50% 0;
+}
+
+.ouro .anim {
+ -webkit-animation-delay: 0s;
+ -webkit-animation-duration: 10s;
+ animation-delay: 0s;
+ animation-duration: 10s;
+}
+
+.ouro .right .anim{
+ -webkit-animation-name: ui-spinner-rotate-right;
+ -webkit-animation-delay: 0;
+-webkit-animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
+ animation-name: ui-spinner-rotate-right;
+ animation-delay: 0;
+animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
+}
+
+
+@keyframes ui-spinner-rotate-right{
+0%{ transform: rotate(0deg); }
+25%{ transform: rotate(180deg); }
+50%{ transform: rotate(180deg); }
+75%{ transform: rotate(360deg); }
+100%{ transform: rotate(360deg); }
+}
+
+@keyframes ui-spinner-rotate-left{
+0%{ transform: rotate(0deg); }
+25%{ transform: rotate(0deg); }
+50%{ transform: rotate(180deg); }
+75%{ transform: rotate(180deg); }
+100%{ transform: rotate(360deg); }
+}
+
+@-webkit-keyframes ui-spinner-rotate-right{
+0%{ -webkit-transform: rotate(0deg); }
+25%{ -webkit-transform: rotate(180deg); }
+50%{ -webkit-transform: rotate(180deg); }
+75%{ -webkit-transform: rotate(360deg); }
+100%{ -webkit-transform: rotate(360deg); }
+}
+
+@-webkit-keyframes ui-spinner-rotate-left{
+0%{ -webkit-transform: rotate(0deg); }
+25%{ -webkit-transform: rotate(0deg); }
+50%{ -webkit-transform: rotate(180deg); }
+75%{ -webkit-transform: rotate(180deg); }
+100%{ -webkit-transform: rotate(360deg); }
+}
+
+.spinner {
+  -webkit-animation: spin 4s linear infinite;
+  -moz-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
+  height: 46px;
+  width: 46px;
+}
+
+@-moz-keyframes spin {
+  100% { -moz-transform: rotate(360deg); }
+}
+
+@-webkit-keyframes spin {
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+      }
+}
